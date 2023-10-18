@@ -4,46 +4,43 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ListView
 import android.widget.TextView
 import com.example.eletriccarapp.R
 
 class MainActivity : AppCompatActivity() {
-    lateinit var preco: EditText
-    lateinit var kmPercorrido: EditText
-    lateinit var btnCalculcar: Button
-    lateinit var resultado: TextView
+    lateinit var btnTela: Button
+    lateinit var lista: ListView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupview()
         setupListeners()
+        setupList()
     }
 
     fun setupview() {
-        preco = findViewById(R.id.et_preco_kwh)
-        kmPercorrido = findViewById(R.id.et_distancia)
-        btnCalculcar = findViewById(R.id.btn_calcular)
-        resultado = findViewById(R.id.tv_resultado)
+        btnTela = findViewById(R.id.btn_tela)
+        lista = findViewById(R.id.lv_informacoes)
+    }
+
+    fun setupList() {
+        var dados = arrayOf(
+            "Cupcake", "Donut", "Froyo", "Gingerbread", "Honeycomb"
+        )
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, dados)
+
+        lista.adapter = adapter
     }
 
     fun setupListeners() {
-        btnCalculcar.setOnClickListener {
-            val textoDigitado = preco.text.toString()
-            Log.d("texto digitado ->", textoDigitado)
-
-            //calcula()
+        btnTela.setOnClickListener {
             startActivity(Intent(this, CalculaAutonomiaActivity::class.java))
         }
     }
 
-    fun calcula() {
-        val preco = preco.text.toString().toFloat()
-        val km = kmPercorrido.text.toString().toFloat()
-        var result = preco / km
-
-        resultado.text = result.toString()
-    }
 }

@@ -8,12 +8,13 @@
     <string name="recarga">Recarga</string>
     <string name="distancia_percorrida">Distancia percorrida</string>
     <string name="preco_kwh">Preço Kwh</string>
-    <string name="calcular">Calcular</string>
+    <string name="outra_tela">Outra Tela</string>
     <string name="hamburguer">Hamburguer</string>
     <string name="pizza">Pizza</string>
     <string name="compromisso_1">Compromisso 1</string>
     <string name="compromisso_2">Compromisso 2</string>
     <string name="ligar_lampada">Ligar Lampada</string>
+    <string name="calcular">Calcular</string>
     <string-array name="array_cidades">
         <item>Guarulhos</item>
         <item>São Paulo</item>
