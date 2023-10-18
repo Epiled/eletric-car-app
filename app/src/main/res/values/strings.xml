@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Eletric Car App</string>
+    <string name="carros">Carros</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="preco">Preço</string>
+    <string name="bateria">Bateria</string>
+    <string name="potencia">Potência</string>
+    <string name="recarga">Recarga</string>
+    <string name="distancia_percorrida">Distancia percorrida</string>
+    <string name="preco_kwh">Preço Kwh</string>
+    <string name="calcular">Calcular</string>
+    <string name="hamburguer">Hamburguer</string>
+    <string name="pizza">Pizza</string>
+    <string name="compromisso_1">Compromisso 1</string>
+    <string name="compromisso_2">Compromisso 2</string>
+    <string name="ligar_lampada">Ligar Lampada</string>
+    <string-array name="array_cidades">
+        <item>Guarulhos</item>
+        <item>São Paulo</item>
+    </string-array>
+</resources>
