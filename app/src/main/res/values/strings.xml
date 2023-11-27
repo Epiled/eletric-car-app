@@ -15,6 +15,9 @@
     <string name="compromisso_2">Compromisso 2</string>
     <string name="ligar_lampada">Ligar Lampada</string>
     <string name="calcular">Calcular</string>
+    <string name="no_wifi">Ops, internet não disponivel</string>
+    <string name="response_error">Algo dey errado, por favor tente novamente mais tarde</string>
+    <string name="saved_calc">saved_calc</string>
     <string-array name="array_cidades">
         <item>Guarulhos</item>
         <item>São Paulo</item>

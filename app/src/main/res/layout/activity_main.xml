@@ -7,6 +7,37 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/carros"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/favoritos"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+<androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/vt_view_page"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/tab_layout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+
     <TextView
         android:id="@+id/tv_titulo"
         android:layout_width="wrap_content"
@@ -16,158 +47,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/l_tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_titulo"
-        android:layout_marginTop="25dp"
-        >
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/carros"
-            style="@style/TextAppearance.AppCompat.Body2"
-            />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/favoritos"
-            style="@style/TextAppearance.AppCompat.Body2"
-            />
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_car"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/l_tabs"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        app:cardElevation="5dp"
-        >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_card_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:background="@color/gray"
-            >
-
-            <ImageView
-                android:id="@+id/iv_carro_eletrico"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:src="@drawable/carro_eletrico"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
-
-            <TextView
-                android:id="@+id/tv_preco"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:text="@string/preco"
-                style="@style/TextAppearance.AppCompat.Body2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_carro_eletrico"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="R$ 120.000,00"
-                style="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintStart_toEndOf="@+id/tv_preco"
-                app:layout_constraintTop_toTopOf="@+id/tv_preco"
-                />
-
-            <TextView
-                android:id="@+id/tv_bateria"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:text="@string/bateria"
-                style="@style/TextAppearance.AppCompat.Body2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_preco"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="93,4 kWh"
-                style="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintStart_toEndOf="@+id/tv_bateria"
-                app:layout_constraintTop_toTopOf="@+id/tv_bateria"
-                />
-
-            <TextView
-                android:id="@+id/tv_potencia"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:text="@string/potencia"
-                style="@style/TextAppearance.AppCompat.Body2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_bateria"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="646 cv"
-                style="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintStart_toEndOf="@+id/tv_potencia"
-                app:layout_constraintTop_toTopOf="@+id/tv_potencia"
-                />
-
-            <TextView
-                android:id="@+id/tv_recarga"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:text="@string/recarga"
-                style="@style/TextAppearance.AppCompat.Body2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_potencia"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="23 min"
-                style="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintStart_toEndOf="@+id/tv_recarga"
-                app:layout_constraintTop_toTopOf="@+id/tv_recarga"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <ListView
-        android:id="@+id/lv_informacoes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_car"
-        app:layout_constraintBottom_toTopOf="@+id/btn_tela"
-        />
-
-    <Button
-        android:id="@+id/btn_tela"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/outra_tela"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
